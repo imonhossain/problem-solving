@@ -1,6 +1,5 @@
 
 let Trie = function () {
-  console.log('this', this);
   this.root = {};
 };
 
