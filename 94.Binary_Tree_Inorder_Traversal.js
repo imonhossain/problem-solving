@@ -8,4 +8,4 @@ var inorderTraversal = function (root) {
   let res = [];
   helper(root, res);
   return res;
-};
+}; 

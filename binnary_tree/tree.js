@@ -33,5 +33,5 @@ const dfs = (root) => {
 }
 
 
-console.log(dfs(a));
+console.log(JSON.stringify(a));
 
