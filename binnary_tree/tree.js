@@ -5,25 +5,25 @@ class Node {
     this.right = null;
   }
 }
-const a = new Node('a');
-const b = new Node('b');
-const c = new Node('c');
-const d = new Node('d');
-const e = new Node('e');
-const f = new Node('f');
+const a = new Node('3');
+const b = new Node('9');
+const c = new Node('20');
+const d = new Node('15');
+const e = new Node('7');
+// const f = new Node('f');
 // const g = new Node('g');
 
 a.left = b;
 a.right = c;
-b.left = d;
-b.right = e;
-c.right = f;
-let counter = 0;
+c.left = d;
+c.right = e;
+// b.right = e;
+// let counter = 0;
 const helper = (root, res) => {
   if(!root) return;
   if(root.left) helper(root.left, res);
-  res.push(root.val);
   if(root.right) helper(root.right, res);
+  res.push(root.val);
 }
 
 const dfs = (root) => {
@@ -31,7 +31,10 @@ const dfs = (root) => {
   helper(root, res);
   return res;
 }
+var maxDepth = function(root){
+  if(!root) return 0;
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+};
 
-
-console.log(JSON.stringify(a));
+console.log(maxDepth(a));
 
